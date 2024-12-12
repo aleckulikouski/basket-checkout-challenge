@@ -1,0 +1,24 @@
+<div class="basket">
+  <div class="header">
+    Basket Items: {{ basketService.totalQuantity }}
+  </div>
+  @for (product of basketService.products; track $index) {
+    <apl-basket-item
+      [product]="product"
+    />
+  } @empty {
+    Basket is empty
+  }
+  <div>Total Price: £{{ basketService.totalQuantity }}</div>
+  <div class="cc-number">
+    <span>Input Your Card Number</span>
+    <input [(ngModel)]="ccNumber" type="number">
+  </div>
+  <div class="actions">
+    <button [routerLink]="['/products']">Continue Shopping</button>
+    <button
+      [disabled]="!basketService.totalQuantity"
+      (click)="checkout()"
+    >Checkout</button>
+  </div>
+</div>

@@ -1,0 +1,8 @@
+<div class="basket-item">
+  <div>{{ product().name }}</div>
+  <div>{{ basketService.productQuantity(product()) }}</div>
+  <div>£{{ product().price }}</div>
+  <div>£{{ basketService.totalPricePerProduct(product()) }}</div>
+  <button (click)="basketService.removeAll(product())">Remove All</button>
+  <div>£{{ product().price }}</div>
+</div>

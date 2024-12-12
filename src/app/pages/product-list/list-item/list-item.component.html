@@ -1,0 +1,15 @@
+<div class="product-card">
+  <div>{{ product().name }}</div>
+  <div>{{ product().description }}</div>
+  <div>£{{ product().price }}</div>
+  <div class="actions">
+    <button
+      [disabled]="isAddToBasketDisabled"
+      (click)="addToBasket()"
+    >Add to basket</button>
+    <button
+      [disabled]="isRemoveFromBasketDisabled"
+      (click)="removeFromBasket()"
+    >Remove from basket</button>
+  </div>
+</div>

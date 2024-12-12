@@ -1,0 +1,15 @@
+<div class="product-list">
+  <div class="header">
+    Basket Items: {{ basketService.totalQuantity }}
+    Total Price: £{{ basketService.totalPrice }}
+  </div>
+  @for (product of products(); track $index) {
+    <apl-list-item
+      [product]="product"
+    />
+  }
+  <button
+    [routerLink]="['/checkout']"
+    [disabled]="!basketService.totalQuantity"
+  >Proceed to Checkout</button>
+</div>

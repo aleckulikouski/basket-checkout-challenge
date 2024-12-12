@@ -1,0 +1,19 @@
+.basket {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  gap: 0.5rem;
+
+  .cc-number {
+    display: flex;
+    gap: 0.5rem;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 0.5rem;
+  }
+}
